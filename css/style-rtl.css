@@ -68,7 +68,9 @@ border: 1px solid #eaf0fc!important;
   z-index: -1;
 
 }
-
+.navbar-brand {
+  
+}
 .navbar {
   z-index: 999;
   margin-top: 20px;
@@ -105,7 +107,6 @@ border: 1px solid #eaf0fc!important;
 
 .header-main .logo {
   width: 64px;
-  height: 70px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
