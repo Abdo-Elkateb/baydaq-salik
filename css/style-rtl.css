@@ -6,11 +6,40 @@ body {
   font-family: "Tajawal", sans-serif !important;
   list-style: none;
   text-decoration: none;
-  /* color: #495057 */
+   overflow-x: hidden;
+ 
+
+
+
 }
+* {
+  margin: 0;
+  padding: 0;
+
+}
+ navbar-toggler {
+padding: .25rem .75rem;
+font-size: 1.25rem;
+line-height: 1;
+background-color: red;
+border: 1px solid transparent;
+border-radius: .25rem;
+transition: box-shadow .15s ease-in-out;
+}
+.navbar-toggler-icon {
+  line-height: 1;
+}
+.navbar-toggler-icon i {
+  font-size: 32px;
+  color:#ffcc03;
+
+}
+
 
 img {
     width: 100%;
+    max-height:100%;
+    object-fit: cover;
 }
 
 .p-main {
@@ -20,7 +49,7 @@ img {
 .more_a {
   font-size: 14px;
 font-weight: 700;
-background: #ffcc03;
+background: #524616;
 color:#fff;
 border-radius: 100vmax;
 border: none;
@@ -40,23 +69,19 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 
 .header-main {
-  background: url(../img/slider.jpg) no-repeat center center fixed;
-  height: 100vh;
-  width: 100%;
-  color: #fff;
-  background-size: cover;
-  z-index: 3;
-  position: relative;
+background: url(../img/slider.jpg) no-repeat center center fixed;
+  background-size: auto;
+height: 100vh;
+width: 100%;
+color: #fff;
+background-size: cover;
+z-index: 9999;
+position: relative;
 }
-/* .navbar-toggler {
-color:#40e0b9;
-width: 3px;
-height: 2px;
-} */
 
-.navbar-toggler {
-border: 1px solid #eaf0fc!important;
-}
+
+
+
 
 .header-main::after {
   content: "";
@@ -68,14 +93,14 @@ border: 1px solid #eaf0fc!important;
   z-index: -1;
 
 }
-.navbar-brand {
-  
-}
+
 .navbar {
   z-index: 999;
   margin-top: 20px;
 }
 
+/* .navbar-toggler-icon{
+  /* background: url("../img/3-dots.jpg"); */
 
 .nav__main {
 
@@ -326,9 +351,10 @@ object-fit: cover !important;
 }
 
 .active .active_main .active_card .card_img img {
-  max-width:100%;
-  max-height:100%;
+   width: 100%;
+  max-height: 40vh;
   object-fit: cover;
+  display: block;
   cursor: pointer;
 }
 .active .active_main .active_card .card_title {
@@ -413,14 +439,23 @@ background: #ffcc03;
     right: 5px;
     position: absolute;
   }
-  /*  */
+
   /* start learn-chess */
 
 .learn-chess .learn-levels {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+    grid-gap: 10px;
+  margin-bottom: 20px;
 
+
+}
+.learn-chess .level {
+    position: relative;
+  margin: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .learn-chess h6 {
@@ -432,42 +467,8 @@ background: #ffcc03;
 .learn-chess .learn-img {
  width: 64px;
 height: 64px;
-}
-.learn-chess .learn-title h2  {
-  color:#ffcc03;
-  font-size: 30px;
-  font-weight: 600;
-
-  margin-top: 40px;
-  line-height: 1.4;
-}
-.learn-chess .learn-title img {
-width: 70px;
-height: 48px;
-text-align: center;
-margin: 10px 30px 0px 0px;
 
 }
-.learn-chess .learn-level {
-  background: #7d21fe;
-  height: 400px;
- 
-}
-.learn-chess .l2 {
-  background: #40e0b9;
-}
-.learn-chess .l3 {
-  background: #597DFC;
-}
-.learn-chess .l4 {
-  background: #26B7BE;
-}
-.learn-chess .l5 {
-  background: #FF682A;
-}
-
-
-
 
 
 .learn-chess .learn-level img {
@@ -476,34 +477,80 @@ margin: 10px 30px 0px 0px;
   margin-bottom: 20px;
 }
 .learn-chess .learn-level h3 {
-  color:white;
+  color:wheat;
   font-size: 30px;
   font-weight: 700px;
     margin-bottom: 30px;
 }
-.learn-chess .learn-level p {
-  color:white;
-  font-size: 21px;
-  font-weight: 700px;
-    margin-bottom: 60px;
+
+.learn-chess .learn-levels .level  img {
+   width: 100%;
+  max-height: 40vh;
+  object-fit: cover;
+  display: block;
+  transition: all 0.5s ease-in-out;
+ 
 }
-.learn-chess .learn-level a {
-  font-size: 14px;
-font-weight: 700;
-background: none;
-color: white;
-border-radius: 100vmax;
-border: 1px white solid;
-padding: 10px 48px;
-text-decoration: none;
-transition: all .2s ease-in-out;
+.learn-chess .learn-levels .level:hover img {
+  transform: scale(1.2);
 }
-.learn-chess .learn-level a:hover {
-  background: #ffcc03;
-border: 1px #ffcc03 solid;
+.learn-chess .learn-levels h2 {
+  font-weight: 900;
+background: #fff;
+z-index: 999;
+color: black;
+position: absolute;
+font-size: 19px;
+top: 30%;
+right: 50%;
+transform: translate(50%,-50%);
+
+
 }
 
-/*  */
+
+
+.learn-chess .learn-levels .level_title   {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 99;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 0.5s ease-in-out;
+  
+}
+
+
+
+
+.learn-chess .learn-levels .level_title a {
+font-size: 14px;
+font-weight: 700;
+background: #ffcc03;
+color: black;
+border-radius: 100vmax;
+border: none;
+padding: 9px 50px;
+text-decoration: none;
+}
+.learn-levels .level_title:hover {
+  opacity: 1;
+  transform: translatex(0);
+
+}
+
+
 
 /* control */
 
@@ -550,57 +597,7 @@ border: 1px solid #eaf0fc;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* libye_chess */
-
-
-.libye_chess {
-  width: 100%;
-  height: 100%;
-}
 
 .libye_chess h3 {
   font-size: 30px;
@@ -621,8 +618,7 @@ border: 1px solid #eaf0fc;
 .grid_layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 300px;
-    grid-gap: 10px 10px;
+    grid-gap: 10px;
   margin-bottom: 20px;
 }
 
@@ -633,9 +629,7 @@ border: 1px solid #eaf0fc;
     color: white;
     transition: all .3s ease-in-out;
 }
-/* .grid_layout .box:hover {
-transform: scale(1.1);
-} */
+
 
 .grid_layout .box::after {
   content: "";
@@ -654,14 +648,15 @@ transform: scale(1.1);
 .grid_layout .box .libya_title {
   z-index: 1;
   position: absolute;
-  bottom: -52%;
+  bottom: -50%;
   margin:  0px 10px 0px 10px;
   transition: all .5s ease-in-out;
 }
 
 .grid_layout .box .libye_image img {
-    object-fit: cover;
-    width: 100%;
+   width: 100%;
+  max-height: 50vh;
+  object-fit: cover;
 }
 
 
@@ -670,13 +665,9 @@ transform: scale(1.1);
     font-size: 22px;
     font-weight: 700;
 }
-.grid_layout .box:hover .libya_title{
-  bottom: 10%
+.grid_layout .box:hover .libya_title {
+  bottom: 20%
 }
-/* .grid_layout .box:hover .libya_title h4 {
-  top:30%;
-  transition: top .5s ease-in-out;
-} */
 
 
 .grid_layout .box .libya_title p {
@@ -687,9 +678,7 @@ font-size: 13px;
 font-weight: 700;
 
 }
-/* .grid_layout .box:hover .libya_title p {
-    top:40%; 
-} */
+
 .grid_layout .box .libya_title .more_a  {
 width: 106px;
 height: 39px;

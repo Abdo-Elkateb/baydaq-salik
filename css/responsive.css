@@ -1,3 +1,5 @@
+
+
 /* 1200px */
 
 @media screen and (max-width: 1200px) {
@@ -5,15 +7,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  /* .grid_layout .box .libya_title {
 
-  bottom: -180px;
-
-} */
 .learn-chess .learn-levels {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+ display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
 }
 }
@@ -25,10 +22,10 @@
     grid-template-columns: 100% !important;
     grid-gap: 5px 5px !important;
   }
-    .active .active_main {
+   .active .active_main {
     display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px 10px;
+  grid-gap: 30px 10px; 
 }
 
 .grid_layout {
@@ -45,7 +42,7 @@
 .learn-chess .learn-levels {
     display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px 10px;
+  grid-gap: 10px 10px;
 
 }
 .control .control-main .control-card h5 {
@@ -105,18 +102,11 @@ footer .footer-main {
   grid-gap: 10px 10px;
 
 }
-.learn-chess .learn-levels .learn-title {
-  text-align: center;
-}
-.learn-chess .learn-levels .learn-title h2  {
-  font-size: 24px;
-}
-.learn-chess .learn-levels .learn-title img {
-  display: none;
-}
+
 .control .control-main {
-  display: grid;
-  grid-template-columns: 1fr;
+    display: grid;
+  grid-template-columns: 95%;
+  grid-gap: 10px 10px;
   
 }
 
@@ -143,6 +133,7 @@ footer .footer-main {
 }
 
 @media screen and (max-width: 600px) {
+
    .active .active_main {
     display: grid;
   grid-template-columns: 100%;
@@ -153,7 +144,7 @@ footer .footer-main {
  }
  .learn-chess .learn-levels {
     display: grid;
-  grid-template-columns: 95%;
+  grid-template-columns: 100%;
   grid-gap: 10px;
 
 }
@@ -176,8 +167,10 @@ footer .footer-main {
 
 }
 
+
   }
- 
+
+
 
  /*  */
 
