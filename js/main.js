@@ -10,7 +10,7 @@ AOS.init({
 var main = document.getElementById("nav__main");
 
 window.onscroll =  () => {
-  if (scrollY > 250) {git
+  if (scrollY > 250) {
     main.classList.add("nav_fixed");
     scroll;
   } else {
