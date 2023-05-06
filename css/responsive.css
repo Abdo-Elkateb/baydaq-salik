@@ -48,8 +48,8 @@
 }
 footer .footer-main {
     display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px 10px;
+  grid-template-columns: 1fr 1fr !important;
+  grid-gap: 30px 10px !important;
 }
 }
 
@@ -119,7 +119,7 @@ footer .footer-main {
 
 footer .footer-main {
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr 1fr !important;
 
 }
 
@@ -150,9 +150,9 @@ height: 51px !important;
 
 
  footer .footer-main {
-   display: grid;
-   grid-template-columns: 1fr;
-   text-align: center;
+   display: grid !important;
+   grid-template-columns: 1fr !important;
+   text-align: center !important;
 
 }
 footer .copyright {
