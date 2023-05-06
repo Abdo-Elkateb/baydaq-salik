@@ -34,11 +34,11 @@
   grid-gap: 30px 10px;
 
 }
-  .grid_layout .box .libya_title {
+  /* .grid_layout .box .libya_title {
 
   bottom: -160px;
 
-}
+} */
 .learn-chess .learn-levels {
     display: grid;
   grid-template-columns: 1fr 1fr;
@@ -121,11 +121,7 @@ footer .footer-main {
   grid-gap: 10px 10px;
 
 }
-  .grid_layout .box .libya_title {
 
-bottom: -139px;
-
-}
 footer .footer-main {
    display: grid;
    grid-template-columns: 1fr 1fr;
@@ -138,28 +134,20 @@ footer .footer-main {
     display: grid;
   grid-template-columns: 100%;
 }
- #avtive_box_item {
-    width: 100%;
-    background-size: cover;
- }
- .learn-chess .learn-levels {
-    display: grid;
-  grid-template-columns: 100%;
-  grid-gap: 10px;
+.active h3 {
+  font-size: 17px;
+  font-weight: 900;
 
 }
-
- .grid_layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 300px;
-    grid-gap: 50px 50px;
-  margin-bottom: 20px;
-  gap: 15px;
+.active .logo {
+ width: 44px !important;
+height: 51px !important;
+}
 }
 
 
-}
+
+
  footer .footer-main {
    display: grid;
    grid-template-columns: 1fr;
@@ -174,14 +162,31 @@ footer .footer-main {
 
  /*  */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 392px) {
 
-
-  .grid_layout .box .libya_title {
-
-  bottom: -130px;
-  color:blanchedalmond
+   .learn-chess .learn-levels {
+    display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 10px;
 
 }
+.header-main .center_header .center__title span {
+  font-size: 22px;
+  font-weight: 700;
+
+
+}
+
+.header-main .center_header .center__title h1 {
+  font-size: 22px;
+  font-weight: 400;
+}
+  .header-main .center_header .center__title .button_center {
+
+    padding: 8px 30px;
+    font-size: 12px;
+  }
+
+
 
 }

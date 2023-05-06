@@ -648,9 +648,12 @@ border: 1px solid #eaf0fc;
 .grid_layout .box .libya_title {
   z-index: 1;
   position: absolute;
-  bottom: -50%;
+transform: translateY(-35px);
   margin:  0px 10px 0px 10px;
   transition: all .5s ease-in-out;
+}
+.grid_layout .box:hover .libya_title {
+transform: translateY(-120%);
 }
 
 .grid_layout .box .libye_image img {
@@ -664,9 +667,6 @@ border: 1px solid #eaf0fc;
     color: #ffcc03;
     font-size: 22px;
     font-weight: 700;
-}
-.grid_layout .box:hover .libya_title {
-  bottom: 20%
 }
 
 
