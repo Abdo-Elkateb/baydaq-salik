@@ -27,6 +27,10 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px 10px; 
 }
+.learn-chess .learn-levels {
+ display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
 
 .grid_layout {
     display: grid;
@@ -34,17 +38,8 @@
   grid-gap: 30px 10px;
 
 }
-  /* .grid_layout .box .libya_title {
 
-  bottom: -160px;
 
-} */
-.learn-chess .learn-levels {
-    display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px 10px;
-
-}
 .control .control-main .control-card h5 {
   font-size: 25px;
 }
@@ -143,6 +138,11 @@ footer .footer-main {
  width: 44px !important;
 height: 51px !important;
 }
+}
+
+.learn-chess .learn-levels {
+ display: grid;
+    grid-template-columns: 1fr;
 }
 
 
