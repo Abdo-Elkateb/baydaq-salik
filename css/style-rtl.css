@@ -61,7 +61,7 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 
 .header-main {
-background: url(../img/slider.jpg) no-repeat center center fixed;
+background: url(./img/slider.jpg) no-repeat center center fixed;
   background-size: auto;
 height: 100vh;
 width: 100%;
@@ -344,7 +344,7 @@ object-fit: cover !important;
 
 .active .active_main .active_card .card_img img {
    width: 100%;
-  max-height: 40vh;
+  max-height: 32vh;
   object-fit: cover;
   display: block;
   cursor: pointer;
@@ -477,7 +477,7 @@ height: 64px;
 
 .learn-chess .learn-levels .level  img {
    width: 100%;
-  max-height: 40vh;
+  max-height: 32vh;
   object-fit: cover;
   display: block;
   transition: all 0.5s ease-in-out;
