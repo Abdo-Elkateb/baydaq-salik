@@ -84,11 +84,12 @@ document.addEventListener("click", () => {
 });
 
 
-const ABI_URL = "./card.json"
+const ABI_URL = "./
+"
 let card = new XMLHttpRequest()
 
 card.open(
-  'GET', ABI_URL, true
+  'get', './js/card.json', true
 );
 
 card.send();
