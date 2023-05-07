@@ -83,16 +83,17 @@ document.addEventListener("click", () => {
 });
 
 
-// const ABI_URL = "./
-// "
-// let card = new XMLHttpRequest()
 
-// card.open(
-//   'get', './js/card.json', true
-// );
+let card = new XMLHttpRequest()
 
-// card.send();
-// console.log(card)
+card.open(
+  'GET', './js/card.json', true
+);
+
+card.send();
+console.log(card)
+
+// response maen data from server 
 
 // card.onreadystatechange = function () {
 //   if(this.readyState === 4 && this.status === 200) {
