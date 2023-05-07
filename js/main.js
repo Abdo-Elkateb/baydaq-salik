@@ -17,7 +17,6 @@ window.onscroll =  () => {
     main.classList.remove("nav_fixed");
   
   }
-
 };
 
 
@@ -84,35 +83,35 @@ document.addEventListener("click", () => {
 });
 
 
-const ABI_URL = "./
-"
-let card = new XMLHttpRequest()
+// const ABI_URL = "./
+// "
+// let card = new XMLHttpRequest()
 
-card.open(
-  'get', './js/card.json', true
-);
+// card.open(
+//   'get', './js/card.json', true
+// );
 
-card.send();
-console.log(card)
+// card.send();
+// console.log(card)
 
-card.onreadystatechange = function () {
-  if(this.readyState === 4 && this.status === 200) {
-    console.log(this.responseText)
-  }
-  let output = "";
+// card.onreadystatechange = function () {
+//   if(this.readyState === 4 && this.status === 200) {
+//     console.log(this.responseText)
+//   }
+//   let output = "";
 
-  for(let item of active) {
-    output += `
+//   for(let item of active) {
+//     output += `
     
-    <div>
+//     <div>
     
-    </div>
+//     </div>
 
     
-    `
-  }
+//     `
+//   }
 
-}
+// }
 
 
 
