@@ -82,40 +82,70 @@ document.addEventListener("click", () => {
   
 });
 
+// readystatus 0 
 
+let card = new XMLHttpRequest() 
 
-let card = new XMLHttpRequest()
-
+// readystatus 1
 card.open(
   'GET', './js/card.json', true
 );
 
+// readystats 2
+
 card.send();
-console.log(card)
 
-// response maen data from server 
 
-// card.onreadystatechange = function () {
-//   if(this.readyState === 4 && this.status === 200) {
-//     console.log(this.responseText)
-//   }
-//   let output = "";
+card.onreadystatechange  = () => {
+// console.log(JSON.parse(card.response))
+// console.log(card.readyState)
+if(card.readyState === 4 && card.status === 200) {
+  let product = JSON.parse(this.responseText)
+  let output = ""
 
-//   for(let item of active) {
-//     output += `
+  //  now o have to loop 
+
+  for(let item of product) {
+    output += `
+         <div class="active_card"data-aos="fade-up">
+        <div class="card_img">
+         <img class="image-click" src="./img/leren-4.jpg" alt=""> 
+        </div>
+
+
+        <div class="card_title">
+          <h4>
+            التعاون مع الجمعية الليبية للشطرنج في تنظيم بطولة الفصول الأربعة الشتوية
+
+          </h4>
+          <p>
+            مكان النشاط:
+            <span> مجمع ذات العماد – مدينة طرابلس</span>
+          </p>
+          <p>
+            تاريخ النشاط
+            <span>
+              من 2018/2/5
+              إلي 2018/2/12
+            </span>
+          </p>
+          <p>
+            مدة النشاط:
+            <span>
+              ثمانية أيام
+            </span>
+          </p>
+
+        </div>
+      </div>
     
-//     <div>
-    
-//     </div>
-
-    
-//     `
-//   }
-
-// }
+    `;
+  }
 
 
+}
 
+}
 
 
 

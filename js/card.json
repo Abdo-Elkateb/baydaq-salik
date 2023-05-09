@@ -2,24 +2,18 @@
   {
     "card": 1,
     "id": 1,
-    "image": "../baydaq -salik/img/img1.jpg",
+    "image": "../img/leren-3.jpg",
     "title": "النبانثتابنثابؤنثتابؤنتثابنثبنؤتاثتنباؤثنياىبؤهثيؤ",
     "body": "qالنتابنهبهيابهيابهخييؤيnsequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
   },
-  {
+   {
     "card": 1,
-    "id": 2,
-     "image": "../baydaq -salik/img/img1.jpg",
-    "title": "qui est esse",
-    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
-  },
-  {
-    "card": 1,
-    "id": 3,
-     "image": "../baydaq -salik/img/img1.jpg",
-    "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
-  },
-  {
+    "id": 1,
+    "image": "./img/img1.jpg",
+    "title": "النبانثتابنثابؤنثتابؤنتثابنثبنؤتاثتنباؤثنياىبؤهثيؤ",
+    "body": "qالنتابنهبهيابهيابهخييؤيnsequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
   }
+
+
+
 ]
