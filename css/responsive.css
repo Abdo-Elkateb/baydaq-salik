@@ -24,19 +24,23 @@
    
   }
   .nav__main .nev-ul ul {
-    margin-top: 15%;
+    padding-top: 10%;
   }
   .nav__main .nev-ul ul li {
     width: 100%;
   }
   .nav__main .nev-ul ul li a {
-    margin-right: 60px;
+    width: 100%;
   }
-  .nav__main .nev-ul ul li a i {
+  /* .nav__main .nev-ul ul li a i {
    position: absolute;
    right: 40px;
+  } */
+  .dropdwon__menu ul {
+    position: relative;
+    width: 100%;
+    left:0px;
   }
-  
   
   .grid_layout {
     display: grid;
