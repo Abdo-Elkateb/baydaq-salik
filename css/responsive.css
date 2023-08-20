@@ -3,6 +3,41 @@
 /* 1200px */
 
 @media screen and (max-width: 1200px) {
+  .header-main .nav-logo {
+    position: absolute;
+    left: 5%;
+    z-index: 999;
+    position: fixed;
+  
+  }
+  .nav__main .nev-ul   {
+    position: fixed;
+    height: 100%;
+    width: 90%;
+    /* left: -100%; */
+    top: 0px;
+    left: 0;
+    background-color: #0e0c05;
+    color: #fff;
+    z-index: 100;
+    transition: all .5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+   
+  }
+  .nav__main .nev-ul ul {
+    margin-top: 15%;
+  }
+  .nav__main .nev-ul ul li {
+    width: 100%;
+  }
+  .nav__main .nev-ul ul li a {
+    margin-right: 60px;
+  }
+  .nav__main .nev-ul ul li a i {
+   position: absolute;
+   right: 40px;
+  }
+  
+  
   .grid_layout {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

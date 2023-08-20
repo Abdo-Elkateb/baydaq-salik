@@ -18,6 +18,10 @@ body {
   padding: 0;  
 
 }
+.container {
+  width: 88%;
+  margin: auto;
+}
 
 .navbar-toggler-icon {
   line-height: 1;
@@ -89,13 +93,84 @@ img {
 
 }
 
-.navbar {
-  z-index: 999;
-  margin-top: 20px;
+.nav__main {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  /* height: 70px; */
+  /* background-color: red; */
+  padding-top: 40px;
+  /* justify-content: space-between; */
+
+
 }
 
-/* .navbar-toggler-icon{
-  /* background: url("../img/3-dots.jpg"); */
+.nav__main .nev-ul ul  {
+/* position: relative; */
+
+}
+.nav__main .nev-ul ul li {
+  position: relative;
+ list-style: none;
+  float: right;
+
+
+}
+.nav__main .nev-ul ul li a {
+font-size:14px;
+color:#f8f9fa;
+padding: 20px 15px;
+display: flex;
+justify-content:space-between;
+text-decoration: none;
+transition: all .5 cubic-bezier(0.23, 1, 0.320, 1)
+}
+.nav__main .nev-ul ul li a i {
+  font-size: 17px;
+  font-weight: 900;
+  margin-right: 5px;
+}
+.nav__main .nev-ul ul li a:hover,
+.nav__main .nev-ul ul li a.avtive {
+  color: #ffcc03;
+}
+
+.dropdwon__menu ul {
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  left:0;
+  display:none;
+  z-index: 99;
+  transition: all .5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.nav__main ul  li:hover  ul {
+  display: block;
+}
+.dropdwon__menu ul li {
+  position: relative;
+  width: 100%;
+  right: 35px;
+  background-color:#fff;
+  border: .5px solid #f8f9fa;
+}
+.dropdwon__menu ul li a {
+  color:#192129 !important;
+  font-size: 13px !important;
+}
+.dropdwon__menu ul li a:hover {
+  background:#ffcc03 !important;
+}
+/* .dropdwon__menu ul li {
+  display: block;
+} */
+
+/* .dropdwon__menu  a {
+  width: 500px !important;
+  color:#524616 !important;
+}
+ */
+
+
 
 .nav__main {
 
@@ -319,6 +394,7 @@ img {
 }
 
 /*  end  about special for another page   */
+
 .active h3 {
   text-align: center;
   margin-top: 60px;

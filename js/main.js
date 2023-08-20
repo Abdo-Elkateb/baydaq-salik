@@ -1,13 +1,19 @@
 //  start js 
 // hello world
 
-var avtive_box = document.getElementById("avtive_box");
-var avtive_box_item = document.getElementById("avtive_box_item");
-var right = document.getElementById("right")
-var left = document.getElementById("left")
-var close = document.getElementById("close");
-var imgs = Array.from(document.getElementsByClassName("image-click"));
-var imagsIndex = 0;
+let avtiveBox = document.getElementById("avtive_box");
+let avtiveBoxItem = document.getElementById("avtive_box_item");
+let right = document.getElementById("right")
+let left = document.getElementById("left")
+let close = document.getElementById("close");
+let imgs = Array.from(document.getElementsByClassName("image-click"));
+let imagsIndex = 0;
+let activeCard = document.getElementById("active_card");
+// let showMoreData = document.querySelector(".show-more-data");
+let showMoreData = document.getElementById("show-more-data");
+let showMore = false;
+
+
 
 // ASO 
 AOS.init({
@@ -27,7 +33,7 @@ function scrollNevber() {
   };
 }
 scrollNevber()
-
+console.log(imgs)
 
 
 //  when you click the image it show you the big image,
@@ -38,58 +44,103 @@ scrollNevber()
 // click image 
 imgs.forEach(element => {
   element.addEventListener("click", (eventInfo) => {
-    avtive_box.style.display = "flex"
+    avtiveBox.style.display = "flex"
     imagsIndex = imgs.indexOf(eventInfo.target)
     console.log(imagsIndex)
     var imageSrc = eventInfo.target.src
-    avtive_box_item.style.backgroundImage = `url(${imageSrc})`
+    avtiveBoxItem.style.backgroundImage = `url(${imageSrc})`
   })
 });
 
 
 
-
-avtive_box_item.addEventListener("click", function (e) {
+avtiveBoxItem.addEventListener("click", function (e) {
   // close  image using if
-if(e.target === close) {
-  avtive_box.style.display = "none"
-}
-if(e.target === right) {
-  imagsIndex++
-  //  console.log(imgs[imagsIndex].src);
-  if (imagsIndex == imgs.length) {
-    imagsIndex = 0
+  if (e.target === close) {
+    avtiveBox.style.display = "none"
   }
-  imageSrc = imgs[imagsIndex].src
-  avtive_box_item.style.backgroundImage = `url(${imageSrc})`;
-}
+  if (e.target === right) {
+    imagsIndex++
+    console.log(imgs[imagsIndex].src);
+    if (imagsIndex == imgs.length) {
+      imagsIndex++
+    }
+    imageSrc = imgs[imagsIndex].src
+    avtiveBoxItem.style.backgroundImage = `url(${imageSrc})`;
+  }
+
+
+  if (e.target === left) {
+    imagsIndex++
+    console.log(imgs[imagsIndex].src);
+    if (imagsIndex == imgs.length) {
+      imagsIndex--
+    }
+    imageSrc = imgs[imagsIndex].src
+    avtiveBoxItem.style.backgroundImage = `url(${imageSrc})`;
+  }
 })
 
+// fetchNewsData
+
+console.log(showMore);
+fetchNewsData()
+let mainContainer = document.getElementById("active_main");
+function fetchNewsData(){
+  let response = fetch("../card.json").then(response => {
+    return response.json()
+  })
+    .then (data => {
+      for(let i = 0; i < data.length; i++ ) {
+        // showMoreData.innerHTML = "عرض المزيد من البطولات"
+        mainContainer.innerHTML += ` 
+    
+          <div id="active_card" class="active_card"data-aos="fade-up">
+                <div class="card_img">
+                <img id="image-click" class="image-click" src="${data[i].picture}" alt="">
+      
+                </div>
+                <div class="card_title">
+                  <h4>${data[i].name} </h4>
+                  <p>${data[i].address}</p>
+                  <p>
+                  ${data[i].date}
+                  </p>
+                  <p>
+                 ${data[i].timer}
+                  </p>
+        
+                </div>
+              </div>
+        `
+        // if(showMore == false && i > 1) {
+        //   break;
+        // }else {
+        //   showMoreData.innerHTML = "عرض القليل من البطولات"
+        //   continue;
+        // }
+      }
+    
+    })
+    .catch(error => {
+      console.log(error);
+    });  
+}
+// showMoreData.addEventListener("click", ()=> {
+//   showMore = !showMore;
+//   mainContainer.replaceChildren();
+//   showMoreData.innerHTML = "";
+//   fetchNewsData();
+//   console.log(showMore);
+// });
+ 
+//  
+// let nextBtn = document.getElementById("nextBtn")
+// let pervBtn = document.getElementById("pervBtn")
 
 
-// next image 
-// right.addEventListener("click", () => {
-//   imagsIndex++
-//   //  console.log(imgs[imagsIndex].src);
-//   if (imagsIndex == imgs.length) {
-//     imagsIndex = 0
-//   }
-//   imageSrc = imgs[imagsIndex].src
-//   avtive_box_item.style.backgroundImage = `url(${imageSrc})`;
-
-// })
-left.addEventListener("click", () => {
-  imagsIndex++;
-  //  console.log(imgs[imagsIndex].src);
-  if (imagsIndex == imgs.length) {
-    imagsIndex = 0;
-  }
-  imageSrc = imgs[imagsIndex].src
-  avtive_box_item.style.backgroundImage = `url(${imageSrc})`;
-
-});
-
-
-
-
-
+while (count <= 10) {
+    total += count;
+  count += 1; }
+  console.log(total);
+  console.log("hi")
