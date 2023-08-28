@@ -1,37 +1,97 @@
-
-
 /* 1200px */
 
 @media screen and (max-width: 1200px) {
-  .header-main .nav-logo {
-    position: absolute;
-    left: 5%;
-    z-index: 999;
-    position: fixed;
-  
+  .nav__main .nev-ul ul li a {
+    font-size: 12px;
+    padding: 20px 7px;
   }
-  .nav__main .nev-ul   {
+
+  .grid_layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .learn-chess .learn-levels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+}
+
+/* 990px */
+@media screen and (max-width: 990px) {
+  .header-main {
+    top: 0;
+    position: absolute;
+  }
+    .main_never {
+      /* width: 100%; */
+      height: 80px;
+  
+    }
+
+
+  .nav__main {
     position: fixed;
     height: 100%;
-    width: 90%;
-    /* left: -100%; */
-    top: 0px;
-    left: 0;
-    background-color: #0e0c05;
+    width: 85%;
+    left: -100%;
+    top: 0;
+    background-color: #000000;
     color: #fff;
-    z-index: 100;
+    z-index: 1000;
     transition: all .5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
-   
   }
+
+
+  .main_never.active .nav__main {
+    left: -0%;
+  }
+
+  .lineMenu,
+  .close-win {
+    display: block !important;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    font-size: 23px;
+    color:black;
+
+
+  }
+
+  .header-main .logo {
+    position: absolute;
+    right: 30px;
+
+
+  }
+
+  .nav__main .nev-ul {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    right: 10px;
+    color: #fff;
+    z-index: 1000;
+    transition: all .5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+
+  }
+
   .nav__main .nev-ul ul {
-    padding-top: 10%;
+    margin-top: 100px !important;
+    width: 100% !important;
+
   }
+
   .nav__main .nev-ul ul li {
-    width: 100%;
+    width: 600px;
   }
+
   .nav__main .nev-ul ul li a {
-    width: 100%;
+    width: 100% !important;
   }
+
   /* .nav__main .nev-ul ul li a i {
    position: absolute;
    right: 40px;
@@ -39,57 +99,74 @@
   .dropdwon__menu ul {
     position: relative;
     width: 100%;
-    left:0px;
-  }
-  
-  .grid_layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    left: 0px;
   }
 
-.learn-chess .learn-levels {
- display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  .dropdwon__menu ul {
+    position: absolute;
+    width: 100% !important;
+    top: -10px !important;
+  }
 
-}
-}
+  .dropdwon__menu ul {
+    /* position: absolute;
+          width: 100% !important;
+          top: -10px!important; */
+  }
 
-/* 990px */
-@media screen and (max-width: 990px) {
+  .dropdwon__menu ul li {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    right: 35px;
+    background-color: #e21717;
+    border: .5px solid #f8f9fa;
+  }
+
+  .nav__main .nev-ul ul li a i {
+    position: absolute;
+    right: 90px;
+
+  }
+
   .about_special .about_main {
     display: grid;
     grid-template-columns: 100% !important;
     grid-gap: 5px 5px !important;
   }
-   .active .active_main {
+
+  .active .active_main {
     display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px 10px; 
-}
-.learn-chess .learn-levels {
- display: grid;
-    grid-template-columns: 1fr 1fr ;
-}
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px 10px;
+  }
 
-.grid_layout {
+  .learn-chess .learn-levels {
     display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px 10px;
+    grid-template-columns: 1fr 1fr;
+  }
 
-}
-
-
-.control .control-main .control-card h5 {
-  font-size: 25px;
-}
-.control .control-main .control-card p {
-  font-size: 15px;
-}
-footer .footer-main {
+  .grid_layout {
     display: grid;
-  grid-template-columns: 1fr 1fr !important;
-  grid-gap: 30px 10px !important;
-}
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px 10px;
+
+  }
+
+
+  .control .control-main .control-card h5 {
+    font-size: 25px;
+  }
+
+  .control .control-main .control-card p {
+    font-size: 15px;
+  }
+
+  footer .footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    grid-gap: 30px 10px !important;
+  }
 }
 
 /* 768px - destop */
@@ -106,7 +183,7 @@ footer .footer-main {
 
   .header-main .center_header .center__title h1 {
     font-size: 34px;
-    color: #ffcc03;
+    color: var(--main-color);
     margin-top: 30px;
     line-height: 2;
   }
@@ -118,120 +195,130 @@ footer .footer-main {
     padding: 10px 35px;
     font-size: 14px;
   }
+
   .active h3 {
- font-size: 20px;
-}
-.active .logo {
+    font-size: 20px;
+  }
+
+  .active .logo {
     width: 50px;
-  height: 60px;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-}
-.learn-chess .learn-levels {
-    display: grid;
-  grid-template-columns: 95%;
-  grid-gap: 10px 10px;
+    height: 60px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
 
-}
-
-.control .control-main {
+  .learn-chess .learn-levels {
     display: grid;
-  grid-template-columns: 95%;
-  grid-gap: 10px 10px;
-  
-}
+    grid-template-columns: 95%;
+    grid-gap: 10px 10px;
+
+  }
+
+  .control .control-main {
+    display: grid;
+    grid-template-columns: 95%;
+    grid-gap: 10px 10px;
+
+  }
 
   .active .active_main {
     display: grid;
-  grid-template-columns: 95%;
-  grid-gap: 10px 10px;
-}
-.grid_layout {
+    grid-template-columns: 95%;
+    grid-gap: 10px 10px;
+  }
+
+  .grid_layout {
     display: grid;
-  grid-template-columns: 95%;
-  grid-gap: 10px 10px;
+    grid-template-columns: 95%;
+    grid-gap: 10px 10px;
 
-}
+  }
 
-footer .footer-main {
-   display: grid;
-   grid-template-columns: 1fr 1fr !important;
-
-}
-
-@media screen and (max-width: 600px) {
-
-   .active .active_main {
+  footer .footer-main {
     display: grid;
-  grid-template-columns: 100%;
-}
-.active h3 {
-  font-size: 17px;
-  font-weight: 900;
+    grid-template-columns: 1fr 1fr !important;
 
-}
-.active .logo {
- width: 44px !important;
-height: 51px !important;
-}
-}
+  }
 
-.learn-chess .learn-levels {
- display: grid;
+  @media screen and (max-width: 600px) {
+
+    .active .active_main {
+      display: grid;
+      grid-template-columns: 100%;
+    }
+
+    .active h3 {
+      font-size: 17px;
+      font-weight: 900;
+
+    }
+
+    .active .logo {
+      width: 44px !important;
+      height: 51px !important;
+    }
+  }
+
+  .learn-chess .learn-levels {
+    display: grid;
     grid-template-columns: 1fr;
-
-}
-
-
-
-
- footer .footer-main {
-   display: grid !important;
-   grid-template-columns: 1fr !important;
-   text-align: center !important;
-
-}
-footer .copyright {
-  font-size: 13px;
-font-weight: 900
-}
-footer .copyright a {
-  font-size: 13px;
-font-weight: 900
-}
-
-
-
-
 
   }
 
 
 
- /*  */
+
+  footer .footer-main {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+
+  }
+
+  footer .copyright {
+    font-size: 13px;
+    font-weight: 900
+  }
+
+  footer .copyright a {
+    font-size: 13px;
+    font-weight: 900
+  }
+
+
+
+
+
+}
+
+
+
+/*  */
 
 @media screen and (max-width: 392px) {
 
-   .learn-chess .learn-levels {
+  .learn-chess .learn-levels {
     display: grid;
-  grid-template-columns: 100%;
-  grid-gap: 10px;
+    grid-template-columns: 100%;
+    grid-gap: 10px;
 
-}
-.header-main .center_header .center__title span {
-  font-size: 22px;
-  font-weight: 700;
+  }
+
+  .header-main .center_header .center__title span {
+    font-size: 22px;
+    font-weight: 700;
 
 
-}
+  }
 
-.header-main .center_header .center__title h1 {
-  font-size: 22px;
-  font-weight: 400;
-}
+  .header-main .center_header .center__title h1 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
   .header-main .center_header .center__title .button_center {
 
     padding: 8px 30px;

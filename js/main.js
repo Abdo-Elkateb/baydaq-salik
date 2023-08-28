@@ -12,6 +12,11 @@ let activeCard = document.getElementById("active_card");
 // let showMoreData = document.querySelector(".show-more-data");
 let showMoreData = document.getElementById("show-more-data");
 let showMore = false;
+let lineMenu = document.querySelector(".lineMenu");
+let mainNever = document.querySelector(".main_never");
+ console.log(mainNever);
+let body = document.querySelector("body");
+
 
 
 
@@ -22,13 +27,12 @@ AOS.init({
 
 //  control nevber & makes it fixed using  -- scroll 
 function scrollNevber() {
-  var main = document.getElementById("nav__main");
   window.onscroll = () => {
     if (scrollY > 250) {
-      main.classList.add("nav_fixed");
+      mainNever.classList.add("nav_fixed");
       scroll;
     } else {
-      main.classList.remove("nav_fixed");
+      mainNever.classList.remove("nav_fixed");
     }
   };
 }
@@ -139,8 +143,14 @@ function fetchNewsData(){
 // let pervBtn = document.getElementById("pervBtn")
 
 
-while (count <= 10) {
-    total += count;
-  count += 1; }
-  console.log(total);
-  console.log("hi")
+ 
+  lineMenu.addEventListener("click", ()=> {
+    mainNever.classList.add("active");
+  })
+  body.addEventListener("click", e => {
+    let clikedElem = e.target;
+    if (!clikedElem.classList.contains("lineMenu") && !clikedElem.classList.contains("mainNever")) {
+      mainNever.classList.remove("active");
+  
+    }
+  })
