@@ -87,17 +87,15 @@ avtiveBoxItem.addEventListener("click", function (e) {
 
 // fetchNewsData
 
-console.log(showMore);
-fetchNewsData()
+
 let mainContainer = document.getElementById("active_main");
 function fetchNewsData(){
   let response = fetch("../card.json").then(response => {
     return response.json()
   })
     .then (data => {
-      for(let i = 0; i < data.length; i++ ) {
-        // showMoreData.innerHTML = "عرض المزيد من البطولات"
-        mainContainer.innerHTML += ` 
+      for(let i = 0; i < 3; i++ ) {
+        mainContainer.innerHTML += `
     
           <div id="active_card" class="active_card"data-aos="fade-up">
                 <div class="card_img">
@@ -130,15 +128,7 @@ function fetchNewsData(){
       console.log(error);
     });  
 }
-// showMoreData.addEventListener("click", ()=> {
-//   showMore = !showMore;
-//   mainContainer.replaceChildren();
-//   showMoreData.innerHTML = "";
-//   fetchNewsData();
-//   console.log(showMore);
-// });
- 
-//  
+fetchNewsData()
 // let nextBtn = document.getElementById("nextBtn")
 // let pervBtn = document.getElementById("pervBtn")
 
@@ -154,3 +144,4 @@ function fetchNewsData(){
   
     }
   })
+
