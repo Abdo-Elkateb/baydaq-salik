@@ -90,7 +90,7 @@ avtiveBoxItem.addEventListener("click", function (e) {
 
 let mainContainer = document.getElementById("active_main");
 function fetchNewsData(){
-  let response = fetch("../card.json").then(response => {
+  let response = fetch("./js/card.json").then(response => {
     return response.json()
   })
     .then (data => {
